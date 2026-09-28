@@ -11,12 +11,13 @@ function renderPage() {
     const card = document.createElement("article");
     card.className = "research-card";
     card.innerHTML = `
-     <img class="image" src="${t(topic.imageUrlKr, topic.imageUrlEn)}" alt="">  
-  <span class="tag">${t(topic.tagKr, topic.tagEn)}</span>
-      <span class="tag">${t(topic.tagKr, topic.tagEn)}</span>
-      <h3>${t(topic.titleKr, topic.titleEn)}</h3>
-      <p>${t(topic.bodyKr, topic.bodyEn)}</p>
-      <ul class="skill-tags">${skills.map((s) => `<li>${s}</li>`).join("")}</ul>
+      <img class="research-img" src="${t(topic.imageUrlKr, topic.imageUrlEn)}" alt="${t(topic.titleKr, topic.titleEn)}">
+      <div class="research-card-body">
+        <span class="tag">${t(topic.tagKr, topic.tagEn)}</span>
+        <h3>${t(topic.titleKr, topic.titleEn)}</h3>
+        <p>${t(topic.bodyKr, topic.bodyEn)}</p>
+        <ul class="skill-tags">${skills.map((s) => `<li>${s}</li>`).join("")}</ul>
+      </div>
     `;
     grid.appendChild(card);
   });
