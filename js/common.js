@@ -83,8 +83,48 @@ function renderCommon() {
   updateLangToggleLabel();
 }
 
+function setupMobileNav() {
+  const header = document.querySelector(".site-header");
+  const nav = document.getElementById("site-nav");
+  if (!header || !nav) return;
+
+  /* create hamburger button if not already present */
+  if (!document.getElementById("nav-burger")) {
+    const burger = document.createElement("button");
+    burger.id = "nav-burger";
+    burger.className = "nav-burger";
+    burger.setAttribute("aria-label", "Menu");
+    burger.innerHTML = "<span></span><span></span><span></span>";
+    /* insert before header-right */
+    const headerRight = header.querySelector(".header-right");
+    if (headerRight) {
+      header.insertBefore(burger, headerRight);
+    } else {
+      header.appendChild(burger);
+    }
+
+    burger.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      burger.classList.toggle("active", isOpen);
+      burger.setAttribute("aria-expanded", isOpen);
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    });
+
+    /* close menu when a link is tapped */
+    nav.addEventListener("click", (e) => {
+      if (e.target.tagName === "A") {
+        nav.classList.remove("open");
+        burger.classList.remove("active");
+        burger.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderCommon();
+  setupMobileNav();
   // 각 페이지 전용 렌더 함수가 있다면 실행 (page-*.js 에서 정의)
   if (typeof renderPage === "function") renderPage();
 
