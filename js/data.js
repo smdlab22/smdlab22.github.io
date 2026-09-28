@@ -24,7 +24,7 @@ const LAB_DATA = {
     addressKr: "인천광역시 미추홀구 인하로 100, 22212",
     addressEn: "100 Inha-ro, Michuhol-gu, Incheon, 22212, Republic of Korea",
     email: "bhryu@inha.ac.kr",
-    lastUpdated: "2026.07",
+    lastUpdated: "2026.09",
   },
 
   // ── 내비게이션 메뉴 ─────────────────────────────────────
@@ -57,7 +57,7 @@ const LAB_DATA = {
     // ── 연구 개요 (큰 그림) ──
     // image: 나중에 큰 그림 이미지를 넣을 때 경로만 바꾸면 됩니다 (예: "images/research-overview.png")
     overview: {
-      image: "",
+      image: "images/research-overview.png",
       titleKr: "소재에서 응용까지",
       titleEn: "From Materials to Applications",
       bodyKr: "SMD 연구실은 소재의 합성과 제조에서 출발하여, 소자 설계, 시스템 통합, 그리고 실제 응용까지 — 연구의 전 과정을 아우릅니다.",
