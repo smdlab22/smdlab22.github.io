@@ -63,6 +63,8 @@ const LAB_DATA = {
         bodyEn: "We develop new manufacturing methods that enable scalable, site-selective growth of next-generation semiconductors across large areas.",
         skillsKr: ["박막 성장", "미세 패터닝", "공정 최적화"],
         skillsEn: ["Thin-film growth", "Micropatterning", "Process optimization"],
+        imageUrlKr: "images/research-manufacturing.png",
+        imageUrlEn: "images/research-manufacturing.png",
       },
       {
         tagKr: "센서",
@@ -73,6 +75,8 @@ const LAB_DATA = {
         bodyEn: "We design and demonstrate IoT sensors built on our own 2D materials, achieving ultrasensitive and fast detection for biomedical and environmental safety applications.",
         skillsKr: ["반도체 패키징", "회로 설계", "임베디드 프로그래밍", "적층 제조", "계측 기술", "신호 처리"],
         skillsEn: ["Semiconductor packaging", "Circuit design", "Embedded programming", "Additive manufacturing", "Instrumentation", "Signal processing"],
+        imageUrlKr: "images/research-iot-sensors.png",
+        imageUrlEn: "images/research-iot-sensors.png",
       },
     ],
   },
