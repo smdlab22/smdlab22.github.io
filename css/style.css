@@ -262,40 +262,35 @@ p { margin: 0; }
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* top half: image + text */
-.ov-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  min-height: 320px;
-}
-
+/* full-width image */
 .ov-image {
   position: relative;
   overflow: hidden;
+  max-height: 400px;
 }
 .ov-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
-/* soft fade on the image's right edge into the text */
+/* gradient fade at bottom of image for smooth transition */
 .ov-image::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, transparent 65%, var(--slate-2) 100%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--slate-2));
   pointer-events: none;
-  opacity: 0.55;
 }
 .ov-placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
-  min-height: 320px;
+  min-height: 260px;
   background: rgba(0,0,0,0.12);
 }
 .ov-placeholder span {
@@ -307,10 +302,9 @@ p { margin: 0; }
 }
 
 .ov-content {
-  padding: 44px 40px;
+  padding: 32px 40px 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .ov-eyebrow {
   font-family: var(--font-mono);
@@ -425,20 +419,14 @@ p { margin: 0; }
 }
 
 @media (max-width: 780px) {
-  .ov-top {
-    grid-template-columns: 1fr;
-  }
-  .ov-image { max-height: 220px; }
-  .ov-image::after {
-    background: linear-gradient(to bottom, transparent 50%, var(--slate-2) 100%);
-  }
-  .ov-content { padding: 28px 24px; }
+  .ov-image { max-height: 240px; }
+  .ov-content { padding: 24px 24px 4px; }
   .ov-flow { padding: 24px 16px 28px; gap: 0; }
   .ov-node-circle { width: 40px; height: 40px; font-size: 0.65rem; }
   .ov-node-label { font-size: 0.78rem; }
   .ov-node-sub { font-size: 0.58rem; }
   .ov-flow-connector { min-width: 20px; }
-  .ov-placeholder { min-height: 200px; }
+  .ov-placeholder { min-height: 180px; }
 }
 
 /* ── Research Accordion Cards ── */

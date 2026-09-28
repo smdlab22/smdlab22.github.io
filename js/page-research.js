@@ -24,17 +24,15 @@ function renderPage() {
 
     ovWrap.innerHTML = `
       <div class="research-overview">
-        <div class="ov-top">
-          <div class="ov-image">
-            ${ov.image
-              ? `<img src="${ov.image}" alt="${t(ov.titleKr, ov.titleEn)}">`
-              : '<div class="ov-placeholder"><span>Image</span></div>'}
-          </div>
-          <div class="ov-content">
-            <span class="ov-eyebrow">${t("연구 비전", "Research Vision")}</span>
-            <h3 class="ov-title">${t(ov.titleKr, ov.titleEn)}</h3>
-            <p class="ov-body">${t(ov.bodyKr, ov.bodyEn)}</p>
-          </div>
+        <div class="ov-image">
+          ${ov.image
+            ? `<img src="${ov.image}" alt="${t(ov.titleKr, ov.titleEn)}">`
+            : '<div class="ov-placeholder"><span>Image</span></div>'}
+        </div>
+        <div class="ov-content">
+          <span class="ov-eyebrow">${t("연구 비전", "Research Vision")}</span>
+          <h3 class="ov-title">${t(ov.titleKr, ov.titleEn)}</h3>
+          <p class="ov-body">${t(ov.bodyKr, ov.bodyEn)}</p>
         </div>
         <div class="ov-flow">${flowHtml}</div>
       </div>
