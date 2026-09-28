@@ -30,7 +30,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--wafer);
+  background: var(--slate);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
@@ -38,6 +38,7 @@ body {
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;      /* 한국어 단어(어절) 중간에서 줄바꿈되지 않도록 */
   overflow-wrap: break-word; /* 너무 긴 단어/URL 등은 그래도 줄바꿈 */
+  overflow-x: hidden;        /* 모바일 가로 오버플로 방지 */
 }
 
 img { max-width: 100%; display: block; }
