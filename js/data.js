@@ -115,15 +115,6 @@ const LAB_DATA = {
       linesEn: ["Since 2025.03, Inha University, Mechanical Engineering"],
       photo: "images/member-seeung.jpg",
     },
-    {
-      role: "student",
-      name: "Sung Sik Oh",
-      titleKr: "학부연구생",
-      titleEn: "Undergraduate Researcher",
-      linesKr: ["인하대학교 기계공학과"],
-      linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "images/member-sungsik.jpg",
-    },
   ],
 
   // ── 논문 목록 (인용 표기는 국제 학술 관례에 따라 언어에 관계없이 원문 그대로 둡니다) ──
