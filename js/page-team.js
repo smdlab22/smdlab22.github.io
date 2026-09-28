@@ -12,7 +12,7 @@ function renderPage() {
     const lines = currentLang === "kr" ? pi.linesKr : pi.linesEn;
     piWrap.innerHTML = `
       <div class="team-pi">
-        <div class="avatar">${initials(pi.name)}</div>
+        <div class="avatar">${pi.photo ? `<img src="${pi.photo}" alt="${pi.name}">` : initials(pi.name)}</div>
         <div>
           <h3>${pi.name}</h3>
           <span class="role">${t(pi.titleKr, pi.titleEn)}</span>
@@ -30,7 +30,7 @@ function renderPage() {
     const card = document.createElement("div");
     card.className = "member-card";
     card.innerHTML = `
-      <div class="avatar">${initials(m.name)}</div>
+      <div class="avatar">${m.photo ? `<img src="${m.photo}" alt="${m.name}">` : initials(m.name)}</div>
       <div>
         <h3>${m.name}</h3>
         <span class="role">${t(m.titleKr, m.titleEn)}</span>
