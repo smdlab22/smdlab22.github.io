@@ -326,6 +326,14 @@ const LAB_DATA = {
       imageUrl: "",
     },
     {
+      date: "2023.06",
+      titleKr: "기본연구 과제 수주",
+      titleEn: "Secured a Basic Research Grant",
+      bodyKr: "현장진단형 중금속 오염 검출 IoT 센서 플랫폼 개발을 주제로 기본연구 과제를 수주하였습니다.",
+      bodyEn: "We have secured a basic research grant for the development of a point-of-care IoT sensor platform for heavy-metal contamination detection.",
+      imageUrl: "",
+    },
+    {
       date: "2023",
       titleKr: "유병훈 교수, K-Trib 2023 우수 포스터상 수상",
       titleEn: "Prof. Ryu was awarded the Excellence Poster Award at K-Trib 2023",
