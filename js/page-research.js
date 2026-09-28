@@ -11,6 +11,8 @@ function renderPage() {
     const card = document.createElement("article");
     card.className = "research-card";
     card.innerHTML = `
+     <img class="image" src="${t(topic.imageUrlKr, topic.imageUrlEn)}" alt="">  
+  <span class="tag">${t(topic.tagKr, topic.tagEn)}</span>
       <span class="tag">${t(topic.tagKr, topic.tagEn)}</span>
       <h3>${t(topic.titleKr, topic.titleEn)}</h3>
       <p>${t(topic.bodyKr, topic.bodyEn)}</p>
