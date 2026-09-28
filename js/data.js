@@ -29,7 +29,7 @@ const LAB_DATA = {
     ],
     roomsEn: [
       "Student Office: 2N277",
-      "Lab: Seoho Hall 005A",
+      "Lab: Seoho Bldg. 005A",
     ],
     email: "bhryu@inha.ac.kr",
     lastUpdated: "2026.09",
