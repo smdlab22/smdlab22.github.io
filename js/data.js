@@ -53,6 +53,23 @@ const LAB_DATA = {
   research: {
     introKr: "저희 연구실은 두 축의 연구를 진행합니다: 소재를 다루는 '제조' 기술과, 그 소재를 활용하는 '센서' 기술입니다.",
     introEn: "Our lab works across two connected pillars: manufacturing the materials, and building sensors from them.",
+
+    // ── 연구 개요 (큰 그림) ──
+    // image: 나중에 큰 그림 이미지를 넣을 때 경로만 바꾸면 됩니다 (예: "images/research-overview.png")
+    overview: {
+      image: "",
+      titleKr: "소재에서 응용까지",
+      titleEn: "From Materials to Applications",
+      bodyKr: "SMD 연구실은 소재의 합성과 제조에서 출발하여, 소자 설계, 시스템 통합, 그리고 실제 응용까지 — 연구의 전 과정을 아우릅니다.",
+      bodyEn: "SMD Lab covers the full research spectrum — from material synthesis and manufacturing, through device design and system integration, to real-world applications.",
+      pillars: [
+        { kr: "소재", en: "Materials" },
+        { kr: "소자", en: "Devices" },
+        { kr: "시스템", en: "Systems" },
+        { kr: "응용", en: "Applications" },
+      ],
+    },
+
     topics: [
       {
         tagKr: "제조",
@@ -119,6 +136,32 @@ const LAB_DATA = {
       linesEn: ["Since 2025.03, Inha University, Mechanical Engineering"],
       photo: "images/member-seeung.jpg",
     },
+
+    // ── 학부연구생 ──
+    // 아래 블록을 복사해서 name, titleKr, titleEn, linesKr, linesEn 만 바꾸면 됩니다.
+    // photo 항목은 선택사항입니다. (비워두면 이니셜이 표시됩니다)
+    {
+      role: "undergraduate",
+      name: "학부생 이름",
+      titleKr: "학부연구생",
+      titleEn: "Undergraduate Researcher",
+      linesKr: ["인하대학교 기계공학과"],
+      linesEn: ["Inha University, Mechanical Engineering"],
+      photo: "",
+    },
+    // 여기에 학부생을 더 추가하세요 (위 블록을 복사-붙여넣기)
+
+    // ── Alumni (졸업생) ──
+    // 졸업생이 생기면 아래처럼 추가하세요.
+    // {
+    //   role: "alumni",
+    //   name: "졸업생 이름",
+    //   titleKr: "석사 졸업 (2026)",
+    //   titleEn: "M.S. (2026)",
+    //   linesKr: ["현재 소속"],
+    //   linesEn: ["Current affiliation"],
+    //   photo: "",
+    // },
   ],
 
   // ── 논문 목록 (인용 표기는 국제 학술 관례에 따라 언어에 관계없이 원문 그대로 둡니다) ──

@@ -249,6 +249,103 @@ p { margin: 0; }
 /* ============================================================
    RESEARCH
    ============================================================ */
+/* ── Research Overview (큰 그림) ── */
+.research-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--slate-2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--amber);
+  margin-bottom: 56px;
+  overflow: hidden;
+}
+.ov-content {
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ov-title {
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  color: var(--wafer);
+  margin-bottom: 16px;
+}
+.ov-body {
+  color: var(--grey-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.ov-pillars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.ov-pillar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--wafer);
+  background: rgba(62,124,116,0.18);
+  border: 1px solid rgba(62,124,116,0.35);
+  padding: 8px 16px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.ov-num {
+  font-size: 0.68rem;
+  color: var(--amber);
+  margin-right: 2px;
+}
+.ov-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--amber);
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+.ov-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.15);
+  min-height: 280px;
+}
+.ov-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ov-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 2px dashed rgba(255,255,255,0.12);
+  margin: 20px;
+  border-radius: 4px;
+}
+.ov-placeholder span {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--grey);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 780px) {
+  .research-overview { grid-template-columns: 1fr; }
+  .ov-content { padding: 28px 24px; }
+  .ov-image { min-height: 200px; }
+  .ov-placeholder { min-height: 200px; margin: 16px; }
+}
+
 .research-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
 
 .research-card {
@@ -300,6 +397,22 @@ p { margin: 0; }
 .team-pi .role { font-family: var(--font-mono); font-size: 0.78rem; color: var(--amber); margin-bottom: 10px; display: block; }
 .team-pi ul, .member-card ul { list-style: none; padding: 0; margin: 0; color: var(--grey-soft); font-size: 0.9rem; }
 .team-pi ul li, .member-card ul li { padding: 2px 0; }
+
+.team-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+#team-grad-section,
+#team-ugrad-section,
+#team-alumni-section {
+  margin-top: 36px;
+}
 
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 @media (max-width: 780px) { .team-grid { grid-template-columns: 1fr 1fr; } }
