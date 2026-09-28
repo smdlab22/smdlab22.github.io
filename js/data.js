@@ -206,14 +206,14 @@ const LAB_DATA = {
   // ── 소식 ────────────────────────────────────────────────
   news: [
      {
-      date: "2026",
+      date: "2026.03",
       titleKr: "신진연구 과제 수주",
       titleEn: "Secured an Early-Career Research Grant",
       bodyKr: "이차원 반도체의 제조 및 센서 응용을 주제로 신진연구 과제를 수주하였습니다.",
       bodyEn: "We have secured an early-career research grant to investigate the manufacturing of two-dimensional semiconductors and their applications in sensing.",
     },
     {
-      date: "2026",
+      date: "2026.03",
       titleKr: "Chemical Engineering Journal 논문 출판",
       titleEn: "Publication in Chemical Engineering Journal",
       bodyKr: "LIG 기반 센서를 주제로 한 연구 논문이 Chemical Engineering Journal에 게재되었습니다. 이학준, 안세응 학생의 논문 게재를 진심으로 축하합니다!",
