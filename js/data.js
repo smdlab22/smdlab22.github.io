@@ -23,6 +23,14 @@ const LAB_DATA = {
     universityEn: "Department of Mechanical Engineering, College of Engineering, Inha University",
     addressKr: "인천광역시 미추홀구 인하로 100, 22212",
     addressEn: "100 Inha-ro, Michuhol-gu, Incheon, 22212, Republic of Korea",
+    roomsKr: [
+      "학생 오피스: 2N277",
+      "실험실: 서호관 005A",
+    ],
+    roomsEn: [
+      "Student Office: 2N277",
+      "Lab: Seoho Hall 005A",
+    ],
     email: "bhryu@inha.ac.kr",
     lastUpdated: "2026.09",
   },
@@ -217,7 +225,7 @@ const LAB_DATA = {
       titleKr: "Chemical Engineering Journal 논문 출판",
       titleEn: "Publication in Chemical Engineering Journal",
       bodyKr: "LIG 기반 센서를 주제로 한 연구 논문이 Chemical Engineering Journal에 게재되었습니다. 이학준, 안세응 학생의 논문 게재를 진심으로 축하합니다!",
-      bodyEn: Our research on LIG-based sensors has been published in Chemical Engineering Journal. Many congratulations to Hak Jun Lee and Se Eung Ahn on the publication of their paper!",
+      bodyEn: "Our research on LIG-based sensors has been published in Chemical Engineering Journal. Many congratulations to Hak Jun Lee and Se Eung Ahn on the publication of their paper!",
     },
     {
       date: "2024",
