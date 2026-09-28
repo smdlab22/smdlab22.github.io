@@ -41,8 +41,8 @@ const LAB_DATA = {
   hero: {
     eyebrowKr: "인하대학교 기계공학과",
     eyebrowEn: "Inha University · Mechanical Engineering",
-    titleKr: "차세대 반도체 소재를 설계하고,\n센서로 세상과 연결합니다.",
-    titleEn: "Engineering next-generation\nsemiconductors that sense and connect.",
+    titleKr: "차세대 반도체 소재의 생산 기술을 연구하고,\n센서로 세상과 연결합니다.",
+    titleEn: "Manufacturing technologies for\nnext-generation semiconductor\nmaterials.",
     bodyKr: "SMD 연구실(Smart Manufacturing and Devices Lab)은 차세대 반도체 소재의 정밀하고 확장 가능한 제조 기술을 개발하고, 이를 실제 문제를 감지·진단하는 스마트 IoT 소자로 구현합니다.",
     bodyEn: "SMD Lab — short for Smart Manufacturing and Devices Lab — develops scalable, precisely controlled manufacturing strategies for next-generation semiconductor materials, and translates them into smart IoT devices that sense real-world problems.",
     ctaKr: "대학원생 모집 중 →",
