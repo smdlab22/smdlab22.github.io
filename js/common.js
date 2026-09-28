@@ -16,12 +16,20 @@ function t(kr, en) {
 
 /* data-kr / data-en 속성이 붙은 모든 정적 텍스트 요소 처리 */
 function applyStaticText(root = document) {
-  root.querySelectorAll("[data-kr]").forEach((el) => {
-  const titleEl = root.querySelector('#hero h1');
-  if (titleEl) {
-    titleEl.dataset.kr = LAB_DATA.home.title.kr;
-    titleEl.dataset.en = LAB_DATA.home.title.en;
+  /* 히어로 영역: data.js(LAB_DATA.hero)에서 최신 텍스트를 가져와 data-* 속성을 갱신 */
+  if (typeof LAB_DATA !== "undefined" && LAB_DATA.hero) {
+    const h = LAB_DATA.hero;
+    const heroTitle = root.querySelector("#hero h1");
+    if (heroTitle) { heroTitle.dataset.kr = h.titleKr; heroTitle.dataset.en = h.titleEn; }
+    const heroBody = root.querySelector("#hero .hero-body");
+    if (heroBody) { heroBody.dataset.kr = h.bodyKr; heroBody.dataset.en = h.bodyEn; }
+    const heroCta = root.querySelector("#hero .cta");
+    if (heroCta) { heroCta.dataset.kr = h.ctaKr; heroCta.dataset.en = h.ctaEn; }
+    const heroEyebrow = root.querySelector("#hero .eyebrow");
+    if (heroEyebrow) { heroEyebrow.dataset.kr = h.eyebrowKr; heroEyebrow.dataset.en = h.eyebrowEn; }
   }
+
+  root.querySelectorAll("[data-kr]").forEach((el) => {
     const value = currentLang === "kr" ? el.dataset.kr : el.dataset.en;
     if (value === undefined || value === "") return;
     if (el.tagName === "TITLE") {
