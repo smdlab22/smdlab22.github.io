@@ -63,9 +63,12 @@ function renderPage() {
   const alumniGrid = document.getElementById("team-alumni-grid");
   if (alumniGrid) {
     alumniGrid.innerHTML = "";
-    alumni.forEach((m) => alumniGrid.appendChild(renderMemberCard(m)));
+    if (alumni.length) {
+      alumni.forEach((m) => alumniGrid.appendChild(renderMemberCard(m)));
+    } else {
+      alumniGrid.innerHTML = `<p class="team-empty">${t("준비 중입니다.", "Coming soon.")}</p>`;
+    }
   }
-  if (alumniSection) alumniSection.style.display = alumni.length ? "" : "none";
 
   /* 섹션 라벨 언어 적용 */
   document.querySelectorAll(".team-section-label").forEach((el) => {

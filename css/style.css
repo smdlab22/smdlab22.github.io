@@ -413,6 +413,12 @@ p { margin: 0; }
 #team-alumni-section {
   margin-top: 36px;
 }
+.team-empty {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--grey);
+  padding: 20px 0;
+}
 
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 @media (max-width: 780px) { .team-grid { grid-template-columns: 1fr 1fr; } }
