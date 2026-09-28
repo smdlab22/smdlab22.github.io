@@ -7,24 +7,36 @@ function renderPage() {
   const ov = LAB_DATA.research.overview;
   const ovWrap = document.getElementById("research-overview");
   if (ovWrap && ov) {
-    const pillarsHtml = ov.pillars
+    /* pipeline flow nodes */
+    const flowHtml = ov.pillars
       .map((p, i) => {
-        const arrow = i < ov.pillars.length - 1
-          ? '<span class="ov-arrow"><svg width="20" height="12" viewBox="0 0 20 12"><path d="M0 6h16m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></span>'
+        const connector = i < ov.pillars.length - 1
+          ? '<div class="ov-flow-connector"></div>'
           : '';
-        return `<span class="ov-pillar"><span class="ov-num">0${i + 1}</span>${t(p.kr, p.en)}</span>${arrow}`;
+        return `
+          <div class="ov-flow-node">
+            <span class="ov-node-circle">0${i + 1}</span>
+            <span class="ov-node-label">${t(p.kr, p.en)}</span>
+          </div>
+          ${connector}`;
       })
       .join("");
+
     ovWrap.innerHTML = `
       <div class="research-overview">
-        <div class="ov-content">
-          <h3 class="ov-title">${t(ov.titleKr, ov.titleEn)}</h3>
-          <p class="ov-body">${t(ov.bodyKr, ov.bodyEn)}</p>
-          <div class="ov-pillars">${pillarsHtml}</div>
+        <div class="ov-top">
+          <div class="ov-image">
+            ${ov.image
+              ? `<img src="${ov.image}" alt="${t(ov.titleKr, ov.titleEn)}">`
+              : '<div class="ov-placeholder"><span>Image</span></div>'}
+          </div>
+          <div class="ov-content">
+            <span class="ov-eyebrow">${t("연구 비전", "Research Vision")}</span>
+            <h3 class="ov-title">${t(ov.titleKr, ov.titleEn)}</h3>
+            <p class="ov-body">${t(ov.bodyKr, ov.bodyEn)}</p>
+          </div>
         </div>
-        <div class="ov-image">
-          ${ov.image ? `<img src="${ov.image}" alt="${t(ov.titleKr, ov.titleEn)}">` : '<div class="ov-placeholder"><span>Image</span></div>'}
-        </div>
+        <div class="ov-flow">${flowHtml}</div>
       </div>
     `;
   }
@@ -59,14 +71,13 @@ function renderPage() {
       </div>
       <div class="rc-expand">
         <div class="rc-expand-inner">
-          <div class="rc-detail">
-            <div class="rc-detail-text">
-              ${paragraphs.map(p => `<p>${p}</p>`).join("")}
-              <ul class="skill-tags">${skills.map(s => `<li>${s}</li>`).join("")}</ul>
-            </div>
-            <div class="rc-detail-image">
-              ${topic.imageUrl ? `<img src="${topic.imageUrl}" alt="${t(topic.titleKr, topic.titleEn)}">` : ""}
-            </div>
+          ${topic.imageUrl ? `
+          <div class="rc-detail-image">
+            <img src="${topic.imageUrl}" alt="${t(topic.titleKr, topic.titleEn)}">
+          </div>` : ""}
+          <div class="rc-detail-text">
+            ${paragraphs.map(p => `<p>${p}</p>`).join("")}
+            <ul class="skill-tags">${skills.map(s => `<li>${s}</li>`).join("")}</ul>
           </div>
         </div>
       </div>
