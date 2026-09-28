@@ -293,12 +293,13 @@ const LAB_DATA = {
 
   // ── 소식 ────────────────────────────────────────────────
   news: [
-     {
+    {
       date: "2026.03",
       titleKr: "신진연구 과제 수주",
       titleEn: "Secured an Early-Career Research Grant",
       bodyKr: "이차원 반도체의 제조 및 센서 응용을 주제로 신진연구 과제를 수주하였습니다.",
       bodyEn: "We have secured an early-career research grant to investigate the manufacturing of two-dimensional semiconductors and their applications in sensing.",
+      imageUrl: "",
     },
     {
       date: "2026.03",
@@ -306,6 +307,15 @@ const LAB_DATA = {
       titleEn: "Publication in Chemical Engineering Journal",
       bodyKr: "LIG 기반 센서를 주제로 한 연구 논문이 Chemical Engineering Journal에 게재되었습니다. 이학준, 안세응 학생의 논문 게재를 진심으로 축하합니다!",
       bodyEn: "Our research on LIG-based sensors has been published in Chemical Engineering Journal. Many congratulations to Hak Jun Lee and Se Eung Ahn on the publication of their paper!",
+      imageUrl: "",
+    },
+    {
+      date: "2025.05",
+      titleKr: "한국정밀공학회 최우수논문상 수상",
+      titleEn: "Best Paper Award at the Korean Society for Precision Engineering",
+      bodyKr: "이학준, 안세응 학생이 한국정밀공학회에서 최우수논문상을 수상하였습니다. 축하합니다!",
+      bodyEn: "Hak Jun Lee and Se Eung Ahn received the Best Paper Award at the Korean Society for Precision Engineering. Congratulations!",
+      imageUrl: "",
     },
     {
       date: "2024",
@@ -313,6 +323,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate researchers won the 2024 ICT Convergence Project Competition",
       bodyKr: "이학준, 안세응 학생, 축하합니다!",
       bodyEn: "Many congrats to Hak Jun and Se Eung!",
+      imageUrl: "",
     },
     {
       date: "2023",
@@ -320,6 +331,7 @@ const LAB_DATA = {
       titleEn: "Prof. Ryu was awarded the Excellence Poster Award at K-Trib 2023",
       bodyKr: "",
       bodyEn: "",
+      imageUrl: "",
     },
   ],
 };
