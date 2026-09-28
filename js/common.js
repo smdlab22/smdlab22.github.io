@@ -17,6 +17,11 @@ function t(kr, en) {
 /* data-kr / data-en 속성이 붙은 모든 정적 텍스트 요소 처리 */
 function applyStaticText(root = document) {
   root.querySelectorAll("[data-kr]").forEach((el) => {
+  const titleEl = root.querySelector('#hero h1');
+  if (titleEl) {
+    titleEl.dataset.kr = LAB_DATA.home.title.kr;
+    titleEl.dataset.en = LAB_DATA.home.title.en;
+  }
     const value = currentLang === "kr" ? el.dataset.kr : el.dataset.en;
     if (value === undefined || value === "") return;
     if (el.tagName === "TITLE") {
