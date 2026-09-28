@@ -123,7 +123,7 @@ const LAB_DATA = {
   // 대표 이미지(썸네일)가 표시됩니다. 없으면 자동으로 기본 아이콘이 보여요.
   publications: {
     international: [
-      { year: "Submitted", text: "Interfacial Potential Transduction for Diagnostics. <i>Nature</i> (Submitted)." },
+      { year: "Submitted", text: "Interfacial Potential Transduction for Diagnostics. (Submitted)." },
       { year: "2026", text: "Hak Jun Lee, Se Eung Ahn, Minhyuk Jung, Hye-ran Moon, Byunghoon Ryu, \u201cFlexible and wireless \u2018stick-and-detect\u2019 sensor node based on laser-induced graphene for real-time temperature monitoring toward cold chain applications.\u201d <i>Chemical Engineering Journal</i> (2026): 175415." },
       { year: "2025", text: "Hyun-June Jang, Hyou-Arm Joung, Xiaoao Shi, Rui Ding, Justine Wagner, Erting Tang, Wen Zhuang, Byunghoon Ryu, Guanmin Chen, Kiang-Teck Jerry Yeo, Jun Huang, Junhong Chen, \u201cRadical-mediated electrical enzyme assay for estradiol: Toward point-of-care diagnostics.\u201d <i>Device</i> 3.9 (2025)." },
       { year: "2025", text: "Hyun-June Jang, Rapti Ghosh, Wen Zhuang, Xiaoben Zhang, Yuqin Wang, Xiaoao Shi, Xingkang Huang, Haihui Pu, Byunghoon Ryu, Janan Hui, Mark C Hersam, Junhong Chen, \u201cFine Tuning of Electrical Characteristics of Inkjet Printed Graphene for Physical and Chemical Sensing.\u201d <i>ACS Applied Materials & Interfaces</i> 17.8 (2025): 12911-12920." },
@@ -167,7 +167,7 @@ const LAB_DATA = {
     },
     {
       date: "2023",
-      titleKr: "류병훈 교수, K-Trib 2023 우수 포스터상 수상",
+      titleKr: "유병훈 교수, K-Trib 2023 우수 포스터상 수상",
       titleEn: "Prof. Ryu was awarded the Excellence Poster Award at K-Trib 2023",
       bodyKr: "",
       bodyEn: "",
