@@ -346,33 +346,140 @@ p { margin: 0; }
   .ov-placeholder { min-height: 200px; margin: 16px; }
 }
 
-.research-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+/* ── Research Accordion Cards ── */
+.research-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
 
 .research-card {
   background: var(--slate-2);
   border: 1px solid rgba(255,255,255,0.08);
-  border-top: 3px solid var(--teal);
+  border-left: 3px solid var(--teal);
   overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.research-card .research-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.research-card:hover,
+.research-card.open {
+  border-left-color: var(--amber);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
-.research-card .research-card-body {
-  padding: 28px;
+
+/* ── Collapsed header (always visible) ── */
+.rc-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 28px 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
 }
+.rc-header:hover { background: rgba(255,255,255,0.03); }
+.rc-header:focus-visible { outline: 2px solid var(--amber); outline-offset: -2px; }
+.rc-header-text { flex: 1; min-width: 0; }
+
 .research-card .tag {
   font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--amber); margin-bottom: 12px; display: block;
+  text-transform: uppercase; color: var(--amber); margin-bottom: 10px; display: block;
 }
-.research-card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--wafer); }
-.research-card p { color: var(--grey-soft); margin-bottom: 16px; }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.research-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--wafer);
+  line-height: 1.4;
+}
+.rc-summary {
+  color: var(--grey-soft);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Toggle chevron ── */
+.rc-toggle {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  color: var(--grey);
+  transition: background 0.2s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 4px;
+}
+.rc-header:hover .rc-toggle { background: rgba(255,255,255,0.1); color: var(--wafer); }
+.research-card.open .rc-toggle { transform: rotate(180deg); }
+.rc-chevron { width: 20px; height: 20px; }
+
+/* ── Expandable body ── */
+.rc-expand {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.rc-expand-inner {
+  padding: 0 28px 28px;
+}
+
+/* ── Detail layout: text + image side by side ── */
+.rc-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.rc-detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rc-detail-text p {
+  color: var(--grey-soft);
+  font-size: 0.94rem;
+  line-height: 1.72;
+  margin: 0;
+}
+.rc-detail-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.rc-detail-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Fade-in for expanded content */
+.rc-expand-inner {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+}
+.research-card.open .rc-expand-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Skill tags (shared) ── */
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 8px 0 0; }
 .skill-tags li {
   font-family: var(--font-mono); font-size: 0.72rem;
   border: 1px solid rgba(255,255,255,0.2); padding: 4px 9px; color: var(--grey);
+  border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.skill-tags li:hover { border-color: var(--teal); color: var(--wafer); }
+
+/* ── Mobile responsive ── */
+@media (max-width: 780px) {
+  .rc-detail { grid-template-columns: 1fr; }
+  .rc-detail-image { order: -1; max-height: 240px; overflow: hidden; }
+  .rc-header { padding: 20px 20px 16px; }
+  .rc-expand-inner { padding: 0 20px 20px; }
 }
 
 /* ============================================================
