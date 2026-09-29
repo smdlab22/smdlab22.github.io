@@ -96,7 +96,7 @@ const LAB_DATA = {
         tagKr: "센서",
         tagEn: "Sensing",
         titleKr: "스마트 IoT 센서 설계",
-        titleEn: "Smart IoT Biomedical & Environmental Sensors",
+        titleEn: "Smart IoT Sensors",
         summaryKr: "직접 만든 2D 소재를 활용해 초고감도·초고속으로 반응하는 IoT 센서를 설계하고, 실시간으로 감지하는 기술을 개발합니다.",
         summaryEn: "We design IoT sensors built on our own 2D materials, achieving ultrasensitive and fast detection for real-time monitoring.",
         bodyKr: "의료 현장에서의 신속 진단, 식품 콜드체인의 실시간 온도 모니터링, 대기·수질 환경의 유해물질 감지 등 — 현대 사회가 요구하는 센싱 기술은 단순히 높은 감도를 넘어, 무선 연결성과 현장 배치 가능성까지 갖추어야 합니다.\n\nSMD 연구실은 자체 제조한 2D 반도체 소재와 레이저 유도 그래핀(LIG)을 감지 소재로 활용하여, 센서 소자 설계부터 무선 통신 모듈 통합, 게이트웨이·클라우드 데이터 전송, 실시간 시각화까지 전 시스템을 아우르는 IoT 센서 노드를 개발합니다. 특히 'Stick-and-Detect' 플랫폼은 유연 기판 위에 센서·통신·전원을 일체화하여, 부착만으로 즉시 모니터링이 가능한 새로운 패러다임을 제시합니다.\n\n향후에는 다중 센서 어레이 기반의 동시 다항목 감지, AI 기반 신호 분석, 그리고 자가 전원 구동 기술을 접목하여, 언제 어디서나 자율적으로 작동하는 스마트 센싱 플랫폼으로 확장해 나갈 계획입니다.",
