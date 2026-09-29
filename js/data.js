@@ -155,7 +155,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-jsk.jpg",
     },
     {
       role: "undergraduate",
@@ -164,7 +164,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-jwh.jpg",
     },
     {
       role: "undergraduate",
@@ -173,7 +173,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-ckl.jpg",
     },
     {
       role: "undergraduate",
@@ -182,7 +182,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-cl.jpg",
     },
     {
       role: "undergraduate",
@@ -191,7 +191,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-mhk.jpg",
     },
     {
       role: "undergraduate",
@@ -209,7 +209,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-cmc.jpg",
     },
     {
       role: "undergraduate",
@@ -218,7 +218,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-shk.jpg",
     },
     {
       role: "undergraduate",
@@ -227,7 +227,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-dyl.jpg",
     },
     {
       role: "undergraduate",
@@ -236,7 +236,7 @@ const LAB_DATA = {
       titleEn: "Undergraduate Researcher",
       linesKr: ["인하대학교 기계공학과"],
       linesEn: ["Inha University, Mechanical Engineering"],
-      photo: "",
+      photo: "images/member-sjk.jpg",
     },
 
     // ── Alumni (졸업생) ──
