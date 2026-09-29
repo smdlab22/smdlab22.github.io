@@ -114,6 +114,7 @@ const LAB_DATA = {
     {
       role: "pi",
       name: "Byunghoon Ryu",
+      nameKr: "유병훈",
       titleKr: "지도교수",
       titleEn: "Principal Investigator",
       linesKr: [
@@ -131,6 +132,7 @@ const LAB_DATA = {
     {
       role: "student",
       name: "Hak Jun Lee",
+      nameKr: "이학준",
       titleKr: "석사과정",
       titleEn: "Master Course",
       linesKr: ["2025.03 입학, 인하대학교 기계공학과"],
@@ -140,6 +142,7 @@ const LAB_DATA = {
     {
       role: "student",
       name: "Se Eung Ahn",
+      nameKr: "안세응",
       titleKr: "석사과정",
       titleEn: "Master Course",
       linesKr: ["2025.03 입학, 인하대학교 기계공학과"],
