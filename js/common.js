@@ -108,13 +108,13 @@ function fetchVisitorCount() {
     }
   } catch (e) {}
 
-  var base = "https://api.counterapi.dev/v1";
+  var base = "https://abacus.jasoncameron.dev";
   Promise.all([
-    fetch(base + "/" + NS + "/visits-total/up").then(function(r){ return r.json(); }),
-    fetch(base + "/" + NS + "/visits-" + today + "/up").then(function(r){ return r.json(); }),
+    fetch(base + "/hit/" + NS + "/visits-total").then(function(r){ return r.json(); }),
+    fetch(base + "/hit/" + NS + "/visits-" + today).then(function(r){ return r.json(); }),
   ]).then(function(res) {
-    _vcTotal = res[0].count;
-    _vcToday = res[1].count;
+    _vcTotal = res[0].value;
+    _vcToday = res[1].value;
     try { sessionStorage.setItem(SK, JSON.stringify({ dt: today, td: _vcToday, tt: _vcTotal })); } catch(e){}
     renderVisitorCounter();
   }).catch(function() { /* API \uBD88\uAC00 \uC2DC \uCE74\uC6B4\uD130 \uC228\uAE40 */ });
