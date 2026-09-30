@@ -67,6 +67,57 @@ function renderFooter() {
   if (updEl) {
     updEl.textContent = t("\uB9C8\uC9C0\uB9C9 \uC5C5\uB370\uC774\uD2B8: ", "Last updated: ") + s.lastUpdated;
   }
+  renderVisitorCounter();
+}
+
+/* \u2500\u2500 Visitor Counter \u2500\u2500 */
+let _vcToday = null;
+let _vcTotal = null;
+
+function renderVisitorCounter() {
+  if (_vcToday === null && _vcTotal === null) return;
+  let el = document.getElementById("footer-counter");
+  if (!el) {
+    const footer = document.querySelector("footer");
+    if (!footer) return;
+    el = document.createElement("span");
+    el.id = "footer-counter";
+    footer.appendChild(el);
+  }
+  const td = _vcToday != null ? _vcToday.toLocaleString() : "\u2014";
+  const tt = _vcTotal != null ? _vcTotal.toLocaleString() : "\u2014";
+  el.innerHTML = t("\uC624\uB298", "Today") + " <strong>" + td + "</strong> \u00B7 "
+               + t("\uC804\uCCB4", "Total") + " <strong>" + tt + "</strong>";
+}
+
+function fetchVisitorCount() {
+  var today = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+  var NS = "smdlab22-github-io";
+  var SK = "smdlab-vc";
+
+  /* \uAC19\uC740 \uC138\uC158(\uD0ED)\uC5D0\uC11C \uC774\uBBF8 \uCE74\uC6B4\uD2B8\uD588\uC73C\uBA74 \uCE90\uC2DC \uC0AC\uC6A9 */
+  try {
+    var cached = sessionStorage.getItem(SK);
+    if (cached) {
+      var d = JSON.parse(cached);
+      if (d.dt === today) {
+        _vcToday = d.td; _vcTotal = d.tt;
+        renderVisitorCounter();
+        return;
+      }
+    }
+  } catch (e) {}
+
+  var base = "https://api.counterapi.dev/v1";
+  Promise.all([
+    fetch(base + "/" + NS + "/visits-total/up").then(function(r){ return r.json(); }),
+    fetch(base + "/" + NS + "/visits-" + today + "/up").then(function(r){ return r.json(); }),
+  ]).then(function(res) {
+    _vcTotal = res[0].count;
+    _vcToday = res[1].count;
+    try { sessionStorage.setItem(SK, JSON.stringify({ dt: today, td: _vcToday, tt: _vcTotal })); } catch(e){}
+    renderVisitorCounter();
+  }).catch(function() { /* API \uBD88\uAC00 \uC2DC \uCE74\uC6B4\uD130 \uC228\uAE40 */ });
 }
 
 function updateLangToggleLabel() {
@@ -127,6 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupMobileNav();
   // 각 페이지 전용 렌더 함수가 있다면 실행 (page-*.js 에서 정의)
   if (typeof renderPage === "function") renderPage();
+  fetchVisitorCount();
 
   const btn = document.getElementById("lang-toggle");
   if (btn) {

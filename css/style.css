@@ -978,3 +978,5 @@ footer {
   background: var(--slate);
   border-top: 1px solid rgba(255,255,255,0.06);
 }
+#footer-counter { color: var(--grey); }
+#footer-counter strong { color: var(--grey-soft); font-weight: 600; }
